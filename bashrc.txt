@@ -1,0 +1,24 @@
+alias jfs="cd ~/documents/fieldstone"
+alias jws="cd ~/documents/bungalow-website"
+alias dcu="jfs; docker-compose up"
+alias dcd="jfs; docker-compose down"
+alias dcb="jfs; docker-compose build"
+alias dce="jfs; docker-compose exec fieldstone bash"
+alias f8="jfs; docker-compose exec fieldstone ./manage.py flake8"
+alias test_all="jfs; docker-compose exec fieldstone ./manage.py test -- --reuse-db"
+alias gcm="git checkout master"
+alias gpl="git pull"
+alias gps="git push"
+alias gd="git diff"
+alias gs="git status"
+alias gst="git stash"
+alias gsa="git stash apply"
+alias gad="git add ."
+alias gc="git checkout"
+alias gcmm="git commit -m"
+
+function acp() {
+    git add .
+    git commit -m "$1"
+    git push
+}
